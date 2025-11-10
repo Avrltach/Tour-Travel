@@ -12,7 +12,12 @@ class ImageForm
         return $schema
             ->components([
                 FileUpload::make('image')
-                    ->image(),
+                    ->image()
+                    ->directory('images') 
+                    ->visibility('public')
+                    ->preserveFilenames() 
+                    ->required(),
+
             ]);
     }
 }

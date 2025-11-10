@@ -7,5 +7,5 @@
     @include('home/section/feature')
     @include('home/section/service')
     @include('home/section/destination')
-
+    @include('home/section/image')
 @endsection
