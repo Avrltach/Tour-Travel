@@ -14,8 +14,8 @@ class ImageForm
                 FileUpload::make('image')
                     ->image()
                     ->directory('images') 
-                    ->visibility('public')
-                    ->preserveFilenames() 
+                    ->disk('public_uploads') 
+                    ->preserveFilenames()
                     ->required(),
 
             ]);

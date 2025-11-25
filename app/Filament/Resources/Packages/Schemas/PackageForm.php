@@ -21,7 +21,11 @@ class PackageForm
                     ->default('umum')
                     ->required(),
                 FileUpload::make('image')
-                    ->image(),
+                    ->image()
+                    ->directory('packages')
+                    ->visibility('public')
+                    ->preserveFilenames()
+                    ->required(),
                 TextInput::make('location')
                     ->required(),
                 TextInput::make('price')

@@ -8,4 +8,5 @@
     @include('home/section/service')
     @include('home/section/destination')
     @include('home/section/image')
+    <!-- @include('home/section/about') -->
 @endsection

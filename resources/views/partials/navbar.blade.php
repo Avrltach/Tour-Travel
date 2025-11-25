@@ -9,11 +9,11 @@
           </a>
         </div>
         <ul class="hidden lg:flex items-center gap-6 md:gap-8 py-3"> 
-          <li><a href="#" class="flex text-sm font-medium text-gray-200 hover:text-primary-700 dark:text-white dark:hover:text-primary-500">Home</a></li>
-          <li><a href="#" class="flex text-sm font-medium text-gray-200 hover:text-primary-700 dark:text-white dark:hover:text-primary-500">About Us</a></li>
-          <li><a href="#" class="flex text-sm font-medium text-gray-200 hover:text-primary-700 dark:text-white dark:hover:text-primary-500">Package</a></li>
-          <li><a href="#" class="text-sm font-medium text-gray-200 hover:text-primary-700 dark:text-white dark:hover:text-primary-500">Gallery</a></li>
-          <li><a href="#" class="text-sm font-medium text-gray-200 hover:text-primary-700 dark:text-white dark:hover:text-primary-500">Contact</a></li>
+          <li><a href="#" class="flex text-sm font-medium text-gray-200 hover:text-primary-700 dark:text-white dark:hover:text-primary-500">Beranda</a></li>
+          <li><a href="#" class="flex text-sm font-medium text-gray-200 hover:text-primary-700 dark:text-white dark:hover:text-primary-500">Tentang Kami</a></li>
+          <li><a href="#" class="flex text-sm font-medium text-gray-200 hover:text-primary-700 dark:text-white dark:hover:text-primary-500">Paket Wisata</a></li>
+          <li><a href="#" class="text-sm font-medium text-gray-200 hover:text-primary-700 dark:text-white dark:hover:text-primary-500">Galeri</a></li>
+          <li><a href="#" class="text-sm font-medium text-gray-200 hover:text-primary-700 dark:text-white dark:hover:text-primary-500">Kontak</a></li>
         </ul>
       </div>
       <div class="flex items-center lg:space-x-2">
@@ -28,11 +28,11 @@
 
     <div id="ecommerce-navbar-menu-1" class="bg-gray-50 dark:bg-gray-700 dark:border-gray-600 border border-gray-200 rounded-lg py-3 hidden px-4 mt-4">
       <ul class="text-gray-200 dark:text-white text-sm font-medium dark:text-white space-y-3">
-        <li><a href="#" class="hover:text-primary-700 dark:hover:text-primary-500">Home</a></li>
-        <li><a href="#" class="hover:text-primary-700 dark:hover:text-primary-500">About Us</a></li>
-        <li><a href="#" class="hover:text-primary-700 dark:hover:text-primary-500">Package</a></li>
-        <li><a href="#" class="hover:text-primary-700 dark:hover:text-primary-500">Gallery</a></li>
-        <li><a href="#" class="hover:text-primary-700 dark:hover:text-primary-500">Contact</a></li>
+        <li><a href="#" class="hover:text-primary-700 dark:hover:text-primary-500">Beranda</a></li>
+        <li><a href="#" class="hover:text-primary-700 dark:hover:text-primary-500">Tentang Kami</a></li>
+        <li><a href="#" class="hover:text-primary-700 dark:hover:text-primary-500">Paket Wisata</a></li>
+        <li><a href="#" class="hover:text-primary-700 dark:hover:text-primary-500">Galeri</a></li>
+        <li><a href="#" class="hover:text-primary-700 dark:hover:text-primary-500">Kontak</a></li>
       </ul>
     </div>
   </div>
