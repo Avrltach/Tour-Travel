@@ -18,11 +18,16 @@ module.exports = {
           "950":"#172554"
         },
         secondary: '#085E95',       
-        cyanPrimary: '#1FE4F9',     
+        cyanPrimary: '#1FE4F9', 
+        footer: '#1E2129',          
+        footerText: '#D1D5DB',      
+        footerMuted: '#9CA3AF',     
+        footerHover: '#FACC15',   
         gray: {
           500: '#6B7280',
           400: '#9CA3AF',
         },
+
       },
       backgroundImage: {
         'gradient-primary': 'linear-gradient(to right, #1FE4F9, #085E95)',
