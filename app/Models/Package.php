@@ -25,6 +25,7 @@ class Package extends Model
         return $this->hasMany(Hotel::class);
     }
 
+
     public function promoCodes()
     {
         return $this->hasMany(PromoCode::class);
@@ -33,5 +34,13 @@ class Package extends Model
     public function bookings()
     {
         return $this->hasMany(Booking::class);
+    }
+    protected $appends = ['url_path'];
+
+    public function getUrlPathAttribute()
+    {
+        return $this->image
+            ? url($this->image)
+            : null;
     }
 }

@@ -1,13 +1,27 @@
 <section class="bg-gray-50 dark:bg-gray-900 py-16">
-    <div class="py-4 px-4 md:px-12 lg:px-16 mx-auto max-w-screen-xl">    
-
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">
-                Paket Wisata Populer
-            </h2>
-            <p class="text-lg text-gray-600 dark:text-gray-400 mt-2">
-                Pilih destinasi favorit Anda dan mulai petualangan
-            </p>
+    <div class="py-4 px-4 md:px-12 lg:px-16 mx-auto max-w-screen-xl">
+        <div class="mb-8">
+        <div class="w-full bg-white shadow-lg rounded-xl p-5">
+            <div class="flex items-center gap-4">
+                <div class="flex items-center w-full relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 text-gray-500"></i>
+                    <input 
+                        type="text" 
+                        placeholder="Cari paket wisata"
+                        class="w-full pl-10 pr-4 py-3 bg-gray-100 rounded-lg 
+                            focus:outline-none focus:ring-2 focus:ring-blue-300"
+                    >
+                </div>
+                <i class="fa-solid fa-filter text-gray-500"></i>
+                <div class="flex items-center gap-2 bg-gray-100 px-4 py-3 rounded-lg">
+                    <select 
+                        class="bg-gray-100 focus:outline-none text-gray-700"
+                    >
+                        <option value="">Filter Berdasarkan</option>
+                    </select>
+                </div>
+            </div>
+        </div>
         </div>
         <div id="loading" class="text-center py-12">
             <div class="animate-spin inline-block">
@@ -22,14 +36,6 @@
             <p class="text-red-500 font-medium">Gagal memuat paket wisata.</p>
         </div>
         <div id="tour-packages-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
-       <div class="text-center mt-12">
-            <a href="{{ route('package') }}" 
-            class="inline-flex items-center justify-center px-6 py-3 text-base font-medium border-2 transition duration-150"
-            style="border-image: linear-gradient(135deg, #1FE4F9, #0D90E1) 1; color: transparent; background: linear-gradient(135deg, #1FE4F9, #0D90E1); -webkit-background-clip: text; background-clip: text;">
-                Lihat Semua Paket
-                <i class="fa-solid fa-arrow-right ml-2" ></i>
-            </a>
-        </div>
     </div>
 </section>
 <script>

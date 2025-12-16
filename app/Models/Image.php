@@ -11,7 +11,7 @@ class Image extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'image', // path relatif, misal 'images/IMG_5944.jpg'
+        'image', 
     ];
 
     protected $appends = ['url_path'];
@@ -19,7 +19,7 @@ class Image extends Model
     public function getUrlPathAttribute()
     {
         return $this->image 
-            ? url($this->image) // langsung ke public/
+            ? url($this->image) 
             : null;
     }
 }

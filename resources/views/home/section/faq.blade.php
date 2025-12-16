@@ -1,5 +1,6 @@
 <section class="py-16 md:py-24 bg-gray-50 dark:bg-gray-900">
   <div class="container mx-auto px-6 md:px-12 lg:px-16">
+
     <div class="max-w-2xl mx-auto text-center mb-12">
       <h2 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
         Pertanyaan Yang Sering Diajukan
@@ -8,7 +9,10 @@
         Jawaban singkat untuk membantu Anda mengenal layanan kami lebih dekat.
       </p>
     </div>
+
     <div class="max-w-3xl mx-auto space-y-4">
+
+      <!-- FAQ ITEM -->
       <div class="faq-item border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
         <button class="faq-btn w-full flex justify-between items-center p-6 text-left">
           <span class="text-lg md:text-xl font-semibold text-gray-800 dark:text-white">
@@ -25,6 +29,8 @@
           </p>
         </div>
       </div>
+
+      <!-- FAQ 2 -->
       <div class="faq-item border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
         <button class="faq-btn w-full flex justify-between items-center p-6 text-left">
           <span class="text-lg md:text-xl font-semibold text-gray-800 dark:text-white">
@@ -42,6 +48,7 @@
         </div>
       </div>
 
+      <!-- FAQ 3 -->
       <div class="faq-item border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
         <button class="faq-btn w-full flex justify-between items-center p-6 text-left">
           <span class="text-lg md:text-xl font-semibold text-gray-800 dark:text-white">
@@ -54,10 +61,12 @@
         </button>
         <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 bg-gray-100/50 dark:bg-gray-800/40">
           <p class="p-6 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-            Paket wisata kami umumnya mencakup transportasi, akomodasi, makan sesuai program, tiket masuk wisata, tour guide, dan asuransi perjalanan. Detail lengkap dapat dilihat di masing-masing paket.
+            Paket wisata kami umumnya mencakup transportasi, akomodasi, makan sesuai program, tiket masuk wisata, tour guide, dan asuransi perjalanan.
           </p>
         </div>
       </div>
+
+      <!-- FAQ 4 -->
       <div class="faq-item border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
         <button class="faq-btn w-full flex justify-between items-center p-6 text-left">
           <span class="text-lg md:text-xl font-semibold text-gray-800 dark:text-white">
@@ -70,10 +79,12 @@
         </button>
         <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 bg-gray-100/50 dark:bg-gray-800/40">
           <p class="p-6 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-            Kebijakan pembatalan tergantung pada waktu pembatalan. Pembatalan H-14 mendapat refund 75%, H-7 mendapat 50%, dan kurang dari H-7 tidak dapat refund. Untuk force majeure, kami akan diskusikan solusi terbaik.
+            Pembatalan H-14 mendapat refund 75%, H-7 mendapat 50%, dan kurang dari H-7 tidak dapat refund. Untuk force majeure, kami akan diskusikan solusi terbaik.
           </p>
         </div>
       </div>
+
+      <!-- FAQ 5 -->
       <div class="faq-item border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
         <button class="faq-btn w-full flex justify-between items-center p-6 text-left">
           <span class="text-lg md:text-xl font-semibold text-gray-800 dark:text-white">
@@ -86,10 +97,11 @@
         </button>
         <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 bg-gray-100/50 dark:bg-gray-800/40">
           <p class="p-6 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-            Kami memiliki jadwal open trip reguler ke berbagai destinasi. Anda bisa bergabung dengan peserta lain dan mendapatkan pengalaman seru bersama. Cek jadwal open trip kami di website atau hubungi customer service.
+            Kami memiliki jadwal open trip reguler ke berbagai destinasi. Anda bisa bergabung dengan peserta lain dan mendapatkan pengalaman seru bersama.
           </p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -104,6 +116,7 @@
 
     btn.addEventListener("click", () => {
       const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
+
       document.querySelectorAll(".faq-content").forEach((c) => c.style.maxHeight = "0px");
       document.querySelectorAll(".arrow").forEach((a) => a.style.transform = "rotate(0deg)");
 

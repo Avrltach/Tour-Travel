@@ -1,30 +1,37 @@
 <section class="bg-white dark:bg-gray-900 py-16" style="font-family: 'Montserrat', sans-serif;">
   <div class="max-w-screen-xl mx-auto px-6 md:px-12 lg:px-16">
-    <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-16 text-center">
-      <div>
+    <div class="flex flex-col md:flex-row justify-center items-center gap-16 mb-16 text-center">
+      <div class="flex flex-col items-center">
+        <div
+          class="w-16 h-16 rounded-full flex items-center justify-center mb-3"
+          style="background: linear-gradient(135deg, #1FE4F9, #0D90E1);"
+        >
+          <i class="fa-regular fa-user text-white text-2xl"></i>
+        </div>
+        <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">1000+</h3>
+        <p class="text-gray-500 mt-1">Pelanggan Puas</p>
+      </div>
+      <div class="hidden md:block h-10 border-l border-gray-300 dark:border-gray-700"></div>
+      <div class="flex flex-col items-center">
+        <div
+          class="w-16 h-16 rounded-full flex items-center justify-center mb-3"
+          style="background: linear-gradient(135deg, #1FE4F9, #0D90E1);"
+        >
+        <i class="fa-solid fa-location-dot text-white text-2xl"></i>        
+      </div>
         <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">200+</h3>
         <p class="text-gray-500 mt-1">Destinasi Wisata</p>
       </div>
-
       <div class="hidden md:block h-10 border-l border-gray-300 dark:border-gray-700"></div>
-
-      <div>
-        <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">50+</h3>
-        <p class="text-gray-500 mt-1">Partner Terpercaya</p>
-      </div>
-
-      <div class="hidden md:block h-10 border-l border-gray-300 dark:border-gray-700"></div>
-
-      <div>
-        <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">10+</h3>
-        <p class="text-gray-500 mt-1">Tahun Pengalaman</p>
-      </div>
-
-      <div class="hidden md:block h-10 border-l border-gray-300 dark:border-gray-700"></div>
-
-      <div>
-        <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">5000+</h3>
-        <p class="text-gray-500 mt-1">Pelanggan Puas</p>
+      <div class="flex flex-col items-center">
+        <div
+          class="w-16 h-16 rounded-full flex items-center justify-center mb-3"
+          style="background: linear-gradient(135deg, #1FE4F9, #0D90E1);"
+        >
+          <i class="fa-regular fa-star text-white text-2xl"></i>
+        </div>
+        <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">4.9/5</h3>
+        <p class="text-gray-500 mt-1">Rating Pelanggan</p>
       </div>
     </div>
     <div class="max-w-3xl mx-auto text-center mb-12">

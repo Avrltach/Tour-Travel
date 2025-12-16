@@ -3,29 +3,22 @@
     class="absolute inset-0 bg-cover bg-center"
  style="background-image: 
            linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-           url('{{ asset('images/header.png') }}');"  >
+           url('{{ asset('images/cta/cta1.png') }}');"  >
     <div class="absolute inset-0 bg-teal-900/80"></div>
   </div>
   <div class="relative z-10 container mx-auto px-6 md:px-12 text-center">
     <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-      JELAJAHI LEBIH JAUH BERSAMA<br>
-      CAKRAWALA TOUR & TRAVEL
+      TEMUKAN LAYANAN KOSTUM YANG </br>
+      SESUAI KEBUTUHAN ANDA
     </h2>
     <p class="text-white text-lg mb-8 max-w-2xl mx-auto">
-      Siap untuk petualangan berikutnya? Hubungi kami sekarang dan wujudkan liburan impian Anda!
-    </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="tel:+6281234567890" 
-            class="flex items-center justify-center gap-2 bg-white text-teal-700 hover:bg-teal-50 font-semibold px-8 py-3 rounded-lg transition">
-            <i class="fa fa-phone"></i>
-            Hubungi Kami
-        </a>
-
-        <a href="https://wa.me/6281234567890" target="_blank"
-            class="flex items-center justify-center gap-2 border border-white text-white hover:bg-white/10 font-semibold px-8 py-3 rounded-lg transition">
-            <i class="fa fa-commenting-o text-lg"></i>
-            Chat WhatsApp
-        </a>
-    </div>
+  “Mulai dari perjalanan keluarga, trip komunitas, hingga open trip, semua dapat Anda pesan secara kostum sesuai tujuan dan preferensi Anda. Nikmati pemesanan tour yang mudah, cepat, dan fleksibel dalam satu platform Cakrawala.”    </p>
+   <div class="flex flex-wrap gap-4 justify-center">
+                <a href="{{ route('reservasi') }}"
+                class="px-6 py-2 sm:px-8 sm:py-5 text-white font-semibold rounded-full transition"
+                style="background: linear-gradient(135deg, #1FE4F9, #0D90E1);">
+                    Mulai Pemesanan
+                </a>
+            </div>
   </div>
 </section>

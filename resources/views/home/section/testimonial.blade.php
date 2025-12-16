@@ -1,18 +1,21 @@
 <section class="bg-white dark:bg-gray-900 py-16">
   <div class="max-w-screen-xl mx-auto px-6 md:px-12 lg:px-16">
     <div class="text-center mb-12 max-w-2xl mx-auto">
-      <h2 class="text-4xl font-extrabold mb-6 text-gray-900 dark:text-white" style="font-family: 'Montserrat', sans-serif;">
+      <h2 class="text-4xl font-extrabold mb-6 text-gray-900 dark:text-white">
         Apa Kata Pelanggan Kami
       </h2>
-      <p class="text-gray-500 sm:text-lg leading-relaxed" style="font-family: 'Montserrat', sans-serif;">
+
+      <p class="text-gray-500 sm:text-lg leading-relaxed">
         Lihat beberapa cerita nyata dari pelanggan yang telah menjelajah bersama kami.
       </p>
     </div>
+
     <div id="testimonialCarousel" 
          class="flex gap-6 overflow-x-auto scrollbar-hidden scroll-smooth py-4">
     </div>
   </div>
 </section>
+
 <script>
 const testimonials = [
   { name: "Maria Fransiska Saweho", text: "Pilihan yang tepat untuk teman perjalanan dan pariwisata.", img: "https://randomuser.me/api/portraits/women/44.jpg" },
@@ -36,16 +39,17 @@ function renderTestimonials() {
     `;
     card.innerHTML = `
       <div>
-        <div class="text-yellow-500 mb-3 text-lg" style="font-family: 'Montserrat', sans-serif;">★★★★★</div>
-        <p class="text-gray-600 dark:text-gray-300 mb-4" style="font-family: 'Montserrat', sans-serif;">${t.text}</p>
+        <div class="text-yellow-500 mb-3 text-lg">★★★★★</div>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">${t.text}</p>
       </div>
       <div class="flex items-center justify-center gap-3 mt-2">
         <img src="${t.img}" class="w-10 h-10 rounded-full object-cover">
-        <span class="font-semibold text-gray-800 dark:text-white" style="font-family: 'Montserrat', sans-serif;">${t.name}</span>
+        <span class="font-semibold text-gray-800 dark:text-white">${t.name}</span>
       </div>
     `;
     container.appendChild(card);
   });
 }
+
 renderTestimonials();
 </script>

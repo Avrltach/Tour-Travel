@@ -23,7 +23,7 @@ class PackageForm
                 FileUpload::make('image')
                     ->image()
                     ->directory('packages')
-                    ->visibility('public')
+                    ->disk('public_uploads') 
                     ->preserveFilenames()
                     ->required(),
                 TextInput::make('location')
@@ -31,7 +31,7 @@ class PackageForm
                 TextInput::make('price')
                     ->required()
                     ->numeric()
-                    ->prefix('$'),
+                    ->prefix('RP'),
                 TextInput::make('duration')
                     ->required(),
                 Textarea::make('description')
