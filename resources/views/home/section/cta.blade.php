@@ -14,7 +14,7 @@
     <p class="text-white text-lg mb-8 max-w-2xl mx-auto">
   “Mulai dari perjalanan keluarga, trip komunitas, hingga open trip, semua dapat Anda pesan secara kostum sesuai tujuan dan preferensi Anda. Nikmati pemesanan tour yang mudah, cepat, dan fleksibel dalam satu platform Cakrawala.”    </p>
    <div class="flex flex-wrap gap-4 justify-center">
-                <a href="{{ route('reservasi') }}"
+                <a href="/reservasi"
                 class="px-6 py-2 sm:px-8 sm:py-5 text-white font-semibold rounded-full transition"
                 style="background: linear-gradient(135deg, #1FE4F9, #0D90E1);">
                     Mulai Pemesanan

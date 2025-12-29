@@ -11,11 +11,10 @@
                     Perusahaan perjalanan wisata terpercaya yang siap membawa Anda menjelajahi keindahan Indonesia dan dunia.
                 </p>
                 <div class="flex items-center gap-4 mt-2">
-                    <a href="#" class="hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/cakrawalacreative.pwt" class="hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
                     <a href="#" class="hover:text-yellow-400"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="hover:text-yellow-400"><i class="fab fa-tiktok"></i></a>
-                    <a href="#" class="hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@cakrawalacreative.pwt" class="hover:text-yellow-400"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@cakrawalacreativepwt" class="hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div>

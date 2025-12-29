@@ -25,7 +25,6 @@ Route::get('/package', function () {
 Route::get('/reservasi', function () {
     return view('reservasi.reservasi');
 })->name('reservasi');
-
 Route::get('/packages/{id}', function ($id) {
     return view('package.detail', compact('id'));
 })->name('packages.detail');

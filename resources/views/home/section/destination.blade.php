@@ -75,7 +75,18 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="flex items-center justify-between pt-2">
                         <div>
                             <span class="text-sm text-gray-500 block">Mulai dari</span>
-                            <span class="text-xl font-bold text-blue-600">${price}</span>
+                           <span
+                                class="text-xl font-bold"
+                                style="
+                                    background: linear-gradient(135deg, #1FE4F9, #0D90E1);
+                                    -webkit-background-clip: text;
+                                    background-clip: text;
+                                    -webkit-text-fill-color: transparent;
+                                    color: transparent;
+                                "
+                            >
+                                ${formatRupiah(pkg.price)}
+                            </span>
                         </div>
 
                         <a href="${detailUrl}"
