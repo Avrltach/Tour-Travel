@@ -11,7 +11,7 @@
         <li><a href="{{ route('package') }}" class="text-sm font-medium text-gray-900 hover:text-primary-500" style="font-family: 'Montserrat', sans-serif;">Paket Wisata</a></li>
         <li><a href="{{ route('gallery') }}" class="text-sm font-medium text-gray-900 hover:text-primary-500" style="font-family: 'Montserrat', sans-serif;">Galeri</a></li>
         <li><a href="{{ route('contact') }}" class="text-sm font-medium text-gray-900 hover:text-primary-500" style="font-family: 'Montserrat', sans-serif;">Kontak</a></li>
-        <li>
+        <!-- <li>
           <a href=""
             class="inline-flex items-center justify-center
                     px-5 py-2
@@ -24,7 +24,7 @@
             Pesanan
           </a>
         </li>
-
+ -->
 
       </ul>
       <button data-collapse-toggle="nav-menu" class="lg:hidden p-2 text-gray-900">
@@ -41,7 +41,7 @@
         <li><a href="{{ route('package') }}" style="font-family: 'Montserrat', sans-serif;">Paket Wisata</a></li>
         <li><a href="{{ route('gallery') }}" style="font-family: 'Montserrat', sans-serif;">Galeri</a></li>
         <li><a href="{{ route('contact') }}" style="font-family: 'Montserrat', sans-serif;">Kontak</a></li>
-        <li>
+        <!-- <li>
           <a href=""
             class="inline-flex items-center justify-center
                     px-5 py-2
@@ -53,7 +53,7 @@
                     font-family: 'Montserrat', sans-serif;">
             Pesanan
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>

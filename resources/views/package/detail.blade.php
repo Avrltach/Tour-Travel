@@ -58,7 +58,7 @@
                     <h2 class="text-lg font-semibold mb-4">Fasilitas & Layanan</h2>
                     <ul
                         id="facility"
-                        class="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-600 text-sm"
+                        class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3 text-gray-600 text-sm"
                     ></ul>
                 </div>
             </div>
@@ -89,6 +89,7 @@
 
                     <a
                         href="#"
+                        id="wa-button"
                         style="background: linear-gradient(135deg, #1FE4F9, #0D90E1);"
                         class="block text-center mt-6 px-6 py-3 text-white rounded-lg font-semibold transition hover:opacity-90"
                     >
@@ -109,7 +110,6 @@
         </div>
     </div>
 </section>
-
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     const id = "{{ $id }}";
@@ -151,12 +151,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (data.facility) {
                 data.facility.split(",").forEach(item => {
-                    facilityList.innerHTML += `
-                        <li class="flex items-center gap-2">
-                            <img src="{{ asset('icon/cek.png') }}" class="w-4 h-4">
-                            <span>${item.trim()}</span>
-                        </li>
-                    `;
+                facilityList.innerHTML += `
+                    <li class="flex items-start gap-2">
+                        <img src="{{ asset('icon/cek.png') }}" class="w-4 h-4 mt-0.5">
+                        <span>${item.trim()}</span>
+                    </li>
+                `;
                 });
             }
 
@@ -171,3 +171,4 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 @endsection
+@include('package.section.whatsapp', ['packageId' => $id])

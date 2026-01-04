@@ -1,5 +1,7 @@
 <section class="bg-white dark:bg-gray-900 py-20" style="font-family: 'Montserrat', sans-serif;">
     <div class="max-w-screen-xl mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-16">
+
+        {{-- INFO KONTAK --}}
         <div>
             <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight mb-6">
                 Hubungi Kami
@@ -8,6 +10,7 @@
                 Kami siap membantu Anda. Silakan hubungi kami melalui kontak di bawah ini
                 atau kirimkan pesan melalui form yang tersedia.
             </p>
+
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div class="flex items-start gap-4">
                     <div class="p-4 rounded-2xl shadow-md text-white text-2xl"
@@ -21,6 +24,7 @@
                         </p>
                     </div>
                 </div>
+
                 <div class="flex items-start gap-4">
                     <div class="p-4 rounded-2xl shadow-md text-white text-2xl"
                         style="background: linear-gradient(to right, #1FE4F9, #085E95);">
@@ -31,6 +35,7 @@
                         <p class="text-gray-600 dark:text-gray-300">ccopwt.id@gmail.com</p>
                     </div>
                 </div>
+
                 <div class="flex items-start gap-4">
                     <div class="p-4 rounded-2xl shadow-md text-white text-2xl"
                         style="background: linear-gradient(to right, #1FE4F9, #085E95);">
@@ -44,6 +49,7 @@
                         </p>
                     </div>
                 </div>
+
                 <div class="flex items-start gap-4">
                     <div class="p-4 rounded-2xl shadow-md text-white text-2xl"
                         style="background: linear-gradient(to right, #1FE4F9, #085E95);">
@@ -51,36 +57,80 @@
                     </div>
                     <div>
                         <h4 class="font-semibold text-xl text-gray-900 dark:text-white">Instagram</h4>
-                        <p class="text-gray-600 dark:text-gray-300">(+081) 5678 1234</p>
+                        <p class="text-gray-600 dark:text-gray-300">@cakrawala.travel</p>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="bg-[#F5FAFF] dark:bg-gray-800 p-10 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700">
-            <form action="#" method="POST" class="space-y-6">
-                <input type="text" placeholder="Nama"
-                    class="p-4 rounded-lg border border-gray-300 w-full text-gray-700 
-                           outline-none focus:ring-2 focus:ring-blue-400 transition
-                           dark:bg-gray-700 dark:text-white">
-                <input type="email" placeholder="Email"
-                    class="p-4 rounded-lg border border-gray-300 w-full text-gray-700 
-                           outline-none focus:ring-2 focus:ring-blue-400 transition
-                           dark:bg-gray-700 dark:text-white">
-                <input type="text" placeholder="No Telepon"
+
+            {{-- SUCCESS --}}
+            @if(session('success'))
+                <div class="mb-6 p-4 rounded-lg bg-green-100 text-green-700">
+                    {{ session('success') }}
+                </div>
+            @endif
+
+            {{-- ERROR --}}
+            @if ($errors->any())
+                <div class="mb-6 p-4 rounded-lg bg-red-100 text-red-700">
+                    <ul class="list-disc list-inside">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <form action="{{ route('contact.store') }}" method="POST" class="space-y-6">
+                @csrf
+
+                <input
+                    type="text"
+                    name="name"
+                    value="{{ old('name') }}"
+                    placeholder="Nama"
+                    required
                     class="p-4 rounded-lg border border-gray-300 w-full text-gray-700
                            outline-none focus:ring-2 focus:ring-blue-400 transition
                            dark:bg-gray-700 dark:text-white">
-                <textarea rows="5" placeholder="Pesan Anda"
-                    class="p-4 rounded-lg border border-gray-300 w-full text-gray-700 
+
+                <input
+                    type="email"
+                    name="email"
+                    value="{{ old('email') }}"
+                    placeholder="Email"
+                    required
+                    class="p-4 rounded-lg border border-gray-300 w-full text-gray-700
                            outline-none focus:ring-2 focus:ring-blue-400 transition
-                           dark:bg-gray-700 dark:text-white"></textarea>
-                <button class="w-full text-white py-4 px-10 rounded-lg font-semibold text-lg shadow-md transition"
+                           dark:bg-gray-700 dark:text-white">
+
+                <input
+                    type="text"
+                    name="phone"
+                    value="{{ old('phone') }}"
+                    placeholder="No Telepon"
+                    class="p-4 rounded-lg border border-gray-300 w-full text-gray-700
+                           outline-none focus:ring-2 focus:ring-blue-400 transition
+                           dark:bg-gray-700 dark:text-white">
+
+                <textarea
+                    name="message"
+                    rows="5"
+                    required
+                    placeholder="Pesan Anda"
+                    class="p-4 rounded-lg border border-gray-300 w-full text-gray-700
+                           outline-none focus:ring-2 focus:ring-blue-400 transition
+                           dark:bg-gray-700 dark:text-white">{{ old('message') }}</textarea>
+
+                <button
+                    type="submit"
+                    class="w-full text-white py-4 px-10 rounded-lg font-semibold text-lg shadow-md transition"
                     style="background: linear-gradient(to right, #1FE4F9, #085E95);">
                     Kirim Pesan
                 </button>
-
             </form>
         </div>
-
     </div>
 </section>

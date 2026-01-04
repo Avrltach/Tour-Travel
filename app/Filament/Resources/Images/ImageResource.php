@@ -20,7 +20,7 @@ class ImageResource extends Resource
 {
     protected static ?string $model = Image::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedPhoto;
 
     protected static ?string $recordTitleAttribute = 'id';
 

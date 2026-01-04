@@ -1,12 +1,8 @@
 <section class="bg-gray-50 dark:bg-gray-900 py-16">
     <div class="py-4 px-4 md:px-12 lg:px-16 mx-auto max-w-screen-xl">
-
-        <!-- SEARCH & FILTER -->
         <div class="mb-4">
             <div class="w-full bg-white shadow-lg rounded-xl p-5">
                 <div class="flex items-center gap-4 relative">
-
-                    <!-- Search -->
                     <div class="flex items-center w-full relative">
                         <i class="fa-solid fa-magnifying-glass absolute left-3 text-gray-500"></i>
                         <input 
@@ -17,8 +13,6 @@
                                    focus:outline-none focus:ring-2 focus:ring-blue-300"
                         />
                     </div>
-
-                    <!-- Filter Button -->
                     <div class="relative">
                         <button id="filterBtn"
                             class="flex items-center gap-2 bg-gray-100 px-4 py-3 rounded-lg 
@@ -26,23 +20,20 @@
                             <span class="text-gray-700 text-sm">Filter Berdasarkan</span>
                             <i class="fa-solid fa-chevron-down text-xs"></i>
                         </button>
-
-                        <!-- Dropdown -->
                         <div id="filterDropdown"
                             class="hidden absolute right-0 mt-3 w-72 bg-white rounded-xl shadow-xl p-4 z-50">
-
-                            <!-- Jenis Paket -->
                             <div class="mb-4">
                                 <h4 class="font-semibold mb-2">Jenis Paket</h4>
                                 <label class="flex gap-2 text-sm">
-                                    <input type="checkbox" class="filter-type" value="Umum"> Umum
+                                    <input type="checkbox" class="filter-category" value="Umum"> Umum
                                 </label>
                                 <label class="flex gap-2 text-sm">
-                                    <input type="checkbox" class="filter-type" value="Sekolah"> Sekolah
+                                    <input type="checkbox" class="filter-category" value="Sekolah"> Sekolah
+                                </label>
+                                <label class="flex gap-2 text-sm">
+                                    <input type="checkbox" class="filter-category" value="Tk"> TK
                                 </label>
                             </div>
-
-                            <!-- Durasi -->
                             <div class="mb-4">
                                 <h4 class="font-semibold mb-2">Durasi</h4>
                                 <label class="flex gap-2 text-sm">
@@ -58,8 +49,6 @@
                                     Three Day Two Night
                                 </label>
                             </div>
-
-                            <!-- Harga -->
                             <div>
                                 <h4 class="font-semibold mb-2">Harga</h4>
                                 <label class="flex gap-2 text-sm">
@@ -80,23 +69,16 @@
                 </div>
             </div>
         </div>
-       <!-- ACTIVE FILTERS -->
         <div class="mb-6">
             <div id="activeFilters"
                 class="flex flex-wrap gap-2"></div>
         </div>
-
-        <!-- LOADING -->
         <div id="loading" class="text-center py-12">
             <p class="text-gray-500">Memuat paket wisata...</p>
         </div>
-
-        <!-- ERROR -->
         <div id="error" class="hidden text-center py-12">
             <p class="text-red-500 font-medium">Gagal memuat paket wisata.</p>
         </div>
-
-        <!-- GRID -->
         <div id="tour-packages-grid"
              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
     </div>
@@ -117,8 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const GRADIENT_STYLE = "background: linear-gradient(135deg, #1FE4F9, #0D90E1);";
 
     let allPackages = [];
-
-    /* Toggle dropdown */
     filterBtn.addEventListener("click", () => {
         filterDropdown.classList.toggle("hidden");
     });
@@ -152,18 +132,18 @@ document.addEventListener("DOMContentLoaded", () => {
                     ${pkg.description?.substring(0,80) || "Deskripsi tidak tersedia"}...
                 </p>
                 <div class="flex justify-between items-center pt-2">
-<span
-    class="text-xl font-bold"
-    style="
-        background: linear-gradient(135deg, #1FE4F9, #0D90E1);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: transparent;
-    "
->
-    ${formatRupiah(pkg.price)}
-</span>
+                    <span
+                        class="text-xl font-bold"
+                        style="
+                            background: linear-gradient(135deg, #1FE4F9, #0D90E1);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            color: transparent;
+                        "
+                    >
+                        ${formatRupiah(pkg.price)}
+                    </span>
                     <a href="{{ url('/packages') }}/${pkg.id}"
                        style="${GRADIENT_STYLE}"
                        class="px-4 py-2 text-sm text-white rounded-lg">
@@ -176,8 +156,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const renderPackages = (packages) => {
         if (!packages.length) {
-            packagesGrid.innerHTML =
-                `<p class="col-span-full text-center text-gray-500">
+            packagesGrid.innerHTML = `
+                <p class="col-span-full text-center text-gray-500">
                     Paket tidak ditemukan
                 </p>`;
             return;
@@ -185,13 +165,14 @@ document.addEventListener("DOMContentLoaded", () => {
         packagesGrid.innerHTML = packages.map(renderTourPackageCard).join("");
     };
 
-    /* RENDER ACTIVE FILTER CHIPS */
+    /* ACTIVE FILTER CHIPS */
     const renderActiveFilters = () => {
         activeFiltersContainer.innerHTML = "";
 
         document.querySelectorAll(
-            ".filter-type:checked, .filter-duration:checked, .filter-price:checked"
+            ".filter-category:checked, .filter-duration:checked, .filter-price:checked"
         ).forEach(input => {
+
             const label = input.parentElement.textContent.trim();
 
             const chip = document.createElement("span");
@@ -213,11 +194,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    /* SEARCH & FILTER */
     const applyFilter = () => {
         const keyword = searchInput.value.toLowerCase();
 
-        const types = [...document.querySelectorAll(".filter-type:checked")]
+        const categories = [...document.querySelectorAll(".filter-category:checked")]
             .map(e => e.value.toLowerCase());
 
         const durations = [...document.querySelectorAll(".filter-duration:checked")]
@@ -229,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const filtered = allPackages.filter(pkg => {
             return (
                 (!keyword || pkg.name_package.toLowerCase().includes(keyword)) &&
-                (!types.length || types.includes(pkg.type?.toLowerCase())) &&
+                (!categories.length || categories.includes(pkg.category?.toLowerCase())) &&
                 (!durations.length || durations.some(d =>
                     pkg.duration?.toLowerCase().includes(d)
                 )) &&
@@ -245,8 +225,9 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     searchInput.addEventListener("input", applyFilter);
-    document.querySelectorAll(".filter-type, .filter-duration, .filter-price")
-        .forEach(el => el.addEventListener("change", applyFilter));
+    document.querySelectorAll(
+        ".filter-category, .filter-duration, .filter-price"
+    ).forEach(el => el.addEventListener("change", applyFilter));
 
     /* FETCH DATA */
     fetch(API_URL)
@@ -262,3 +243,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 });
 </script>
+
